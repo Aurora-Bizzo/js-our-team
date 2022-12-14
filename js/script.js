@@ -28,14 +28,19 @@ let team = [
         nome: 'Barbara Ramos',
         ruolo: 'Graphic Designer',
         foto: 'barbara-ramos-graphic-designer.jpg',
-    }
+    },
 ]
 
-const unordered_list = document.getElementById('.list');
 
 for (let i = 0; i<team.length; i++){
     let member = team[i];
     console.log(member);
-    let members = (member);
-    unordered_list.innerHTML += members;
+}
+
+const unordered_list = document.querySelector('.list');
+
+for (let i = 0; i<team.length; i++){
+    let member = team[i];
+    let item = `<li>${member.nome} - ${member.ruolo} - ${member.foto}</li>`;
+    unordered_list.innerHTML += item;
 }
