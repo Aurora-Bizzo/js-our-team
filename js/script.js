@@ -31,16 +31,18 @@ let team = [
     },
 ]
 
+const cards_list = document.getElementById('cards');
 
 for (let i = 0; i<team.length; i++){
     let member = team[i];
-    console.log(member);
+
+    console.log(`${member.nome} - ${member.ruolo} - ${member.foto}`);
+
+    cards_list.innerHTML += `
+    <img src="./img/${member.foto}" width="200px"/>
+    <p>${member.nome}</p>
+    <p>${member.ruolo}</p>
+    `
 }
 
-const unordered_list = document.querySelector('.list');
 
-for (let i = 0; i<team.length; i++){
-    let member = team[i];
-    let item = `<li>${member.nome} - ${member.ruolo} - ${member.foto}</li>`;
-    unordered_list.innerHTML += item;
-}
