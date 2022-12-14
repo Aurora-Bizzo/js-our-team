@@ -31,7 +31,11 @@ let team = [
     }
 ]
 
+const unordered_list = document.getElementById('.list');
+
 for (let i = 0; i<team.length; i++){
     let member = team[i];
     console.log(member);
+    let members = (member);
+    unordered_list.innerHTML += members;
 }
