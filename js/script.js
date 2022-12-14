@@ -31,3 +31,7 @@ let team = [
     }
 ]
 
+for (let i = 0; i<team.length; i++){
+    let member = team[i];
+    console.log(member);
+}
